@@ -5,7 +5,7 @@ const client = new Discord.Client()
 // const config = require('./config.json');
 
 // When the client is ready, run this code (only once)
-client.once('ready', () => {
+client.on('ready', () => {
 	console.log('Ready!');
 });
 
