@@ -10,3 +10,12 @@ client.once('ready', () => {
 
 // Login to Discord with your client's token
 client.login(process.env.PRTS_TOKEN);
+
+
+client.on('message', msg => {
+    if (msg.author.bot) return
+
+    if (msg.content === "$help") {
+        msg.channel.send('no u')
+    }
+})
