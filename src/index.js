@@ -20,4 +20,4 @@ client.on("message", msg => {
 });
 
 // Login to Discord with your client's token
-client.login(config.token);
+client.login(process.env.PRTS_TOKEN);
