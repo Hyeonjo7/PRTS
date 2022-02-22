@@ -6,7 +6,7 @@ const client = new Discord.Client()
 
 // When the client is ready, run this code (only once)
 client.on('ready', () => {
-	console.log('Ready!');
+    console.log('Ready!');
 });
 
 // when bot is pinged reply pong
