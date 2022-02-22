@@ -6,17 +6,23 @@ const channel = client.channels.cache.get('id');
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
-    console.log('Ready!');
+    console.log('PRTS is Online.');
+});
+
+
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isCommand()) return;
+
+	const { commandName } = interaction;
+
+	if (commandName === 'ping') {
+		await interaction.reply('Pong!');
+	} else if (commandName === 'server') {
+		await interaction.reply('Server info.');
+	} else if (commandName === 'user') {
+		await interaction.reply('User info.');
+	}
 });
 
 // Login to Discord with your client's token
 client.login(process.env.PRTS_TOKEN);
-
-
-client.on('message', msg => {
-    if (msg.author.bot) return
-
-    if (msg.content === "$help") {
-        channel.send('no you');
-    }
-})
