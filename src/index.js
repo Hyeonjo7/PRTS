@@ -4,9 +4,6 @@ const Discord = requiere('discord.js')
 const client = new Discord.Client()
 // const config = require('./config.json');
 
-// Create a new client instance
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
-
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
 	console.log('Ready!');
