@@ -5,7 +5,7 @@ const client = new Discord.Client({ intents: [Intents.FLAGS.GUILDS] })
 // const config = require('./config.json');
 
 // When the client is ready, run this code (only once)
-client.on('ready', () => {
+client.once('ready', () => {
     console.log('Ready!');
 });
 
