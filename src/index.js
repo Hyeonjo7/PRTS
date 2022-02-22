@@ -1,7 +1,7 @@
 // Require the necessary discord.js classes
 
 const Discord = require('discord.js')
-const client = new Discord.Client()
+const client = new Discord.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] })
 // const config = require('./config.json');
 
 // When the client is ready, run this code (only once)
