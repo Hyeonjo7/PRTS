@@ -1,7 +1,8 @@
 // Require the necessary discord.js classes
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
-// const config = require('./config.json');
+const channel = client.channels.cache.get('id');
+
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
@@ -16,6 +17,6 @@ client.on('message', msg => {
     if (msg.author.bot) return
 
     if (msg.content === "$help") {
-        msg.channel.send('no u')
+        channel.send('no you');
     }
 })
